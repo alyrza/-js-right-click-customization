@@ -7,6 +7,10 @@
     <title>js right click customization</title>
     <link rel="stylesheet" href="assets/css/blog.css" />
     <link rel="stylesheet" href="assets/css/contextMenu.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+    />
   </head>
   <body>
     <!-- Header -->
@@ -51,6 +55,48 @@
         </p>
       </article>
     </main>
+
+    <!-- Context menu -->
+    <div id="myContextMenu">
+      <ul>
+        <li>
+          <a href="#" onclick="CopySelectedText()">
+            <i class="ri-clipboard-line"></i>
+            copy text
+          </a>
+        </li>
+        <li>
+          <a href="#" onclick="speak()">
+            <i class="ri-user-voice-line"></i>
+            read text
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="ri-screenshot-2-line"></i>
+            screenshot
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="ri-share-line"></i>
+            share
+          </a>
+        </li>
+        <li>
+          <a href="#" onclick="window.print()">
+            <i class="ri-printer-line"></i>
+            print
+          </a>
+        </li>
+        <li>
+          <a href="#" onclick="location.reload()">
+            <i class="ri-refresh-line"></i>
+            reload
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <!-- Footer -->
     <footer>

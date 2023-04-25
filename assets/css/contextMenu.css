@@ -1,0 +1,45 @@
+#myContextMenu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.17);
+  border-radius: 8px;
+  padding: 8px 0;
+}
+
+#myContextMenu.show {
+  display: block;
+  animation: slideUp 0.2s ease-out;
+}
+
+#myContextMenu ul {
+  list-style: none;
+}
+
+#myContextMenu ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+#myContextMenu ul li a {
+  display: block;
+  padding: 12px 30px;
+  color: #333;
+  text-decoration: none;
+  text-align: start;
+  text-transform: capitalize;
+}
+
+#myContextMenu ul li a:hover {
+  background-color: #f2f2f2;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
