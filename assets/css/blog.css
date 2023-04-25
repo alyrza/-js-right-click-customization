@@ -11,6 +11,7 @@ body {
 }
 
 /* ----- Header style -----  */
+
 header {
   background-color: #333;
   color: #fff;
@@ -49,4 +50,13 @@ article {
 
 article p.meta {
   font-style: italic;
+}
+
+/* ----- Footer style -----  */
+
+footer {
+  background-color: #ccc;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
 }
