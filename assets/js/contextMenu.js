@@ -20,7 +20,11 @@ document.addEventListener("click", (event) => {
   myContextMenu.classList.remove("show");
 });
 
-const CopySelectedText = async () => {
+const CopySelectedText = async (event) => {
+
+  // Prevent page refresh
+  event.preventDefault();
+
   let selection = window.getSelection();
 
   if (selection.isCollapsed) {
