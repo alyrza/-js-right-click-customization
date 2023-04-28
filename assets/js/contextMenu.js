@@ -21,7 +21,6 @@ document.addEventListener("click", (event) => {
 });
 
 const CopySelectedText = async (event) => {
-
   // Prevent page refresh
   event.preventDefault();
 
@@ -36,6 +35,7 @@ const CopySelectedText = async (event) => {
   try {
     await navigator.clipboard.writeText(text);
     // success
+    showAlert("Copied!");
   } catch (err) {
     // error
   }
