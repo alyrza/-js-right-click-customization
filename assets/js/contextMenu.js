@@ -19,3 +19,20 @@ document.addEventListener("contextmenu", (event) => {
 document.addEventListener("click", (event) => {
   myContextMenu.classList.remove("show");
 });
+
+const CopySelectedText = async () => {
+  let selection = window.getSelection();
+
+  if (selection.isCollapsed) {
+    return;
+  }
+
+  let text = selection.toString();
+
+  try {
+    await navigator.clipboard.writeText(text);
+    // success
+  } catch (err) {
+    // error
+  }
+};
