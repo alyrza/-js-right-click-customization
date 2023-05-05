@@ -1,4 +1,5 @@
 const myContextMenu = document.querySelector("#myContextMenu");
+const copyTextBtn = document.querySelector("#copyTextBtn");
 
 document.addEventListener("contextmenu", (event) => {
   event.preventDefault();
@@ -14,6 +15,14 @@ document.addEventListener("contextmenu", (event) => {
   }
 
   myContextMenu.classList.add("show");
+
+  let selection = window.getSelection();
+
+  if (selection.isCollapsed) {
+    copyTextBtn.classList.add("hide");
+  }else{
+    copyTextBtn.classList.remove("hide");
+  }
 });
 
 document.addEventListener("click", (event) => {
@@ -23,12 +32,6 @@ document.addEventListener("click", (event) => {
 const CopySelectedText = async (event) => {
   // Prevent page refresh
   event.preventDefault();
-
-  let selection = window.getSelection();
-
-  if (selection.isCollapsed) {
-    return;
-  }
 
   let text = selection.toString();
 
