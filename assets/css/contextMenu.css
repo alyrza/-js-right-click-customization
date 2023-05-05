@@ -44,6 +44,12 @@
   }
 }
 
-.hide{
+.hide {
   display: none;
+}
+
+@media print {
+  #myContextMenu {
+    display: none !important ;
+  }
 }
