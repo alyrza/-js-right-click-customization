@@ -1,5 +1,6 @@
 const myContextMenu = document.querySelector("#myContextMenu");
 const copyTextBtn = document.querySelector("#copyTextBtn");
+const readTextBtn = document.querySelector("#readTextBtn");
 
 document.addEventListener("contextmenu", (event) => {
   event.preventDefault();
@@ -20,8 +21,10 @@ document.addEventListener("contextmenu", (event) => {
 
   if (selection.isCollapsed) {
     copyTextBtn.classList.add("hide");
+    readTextBtn.classList.add("hide");
   }else{
     copyTextBtn.classList.remove("hide");
+    readTextBtn.classList.remove("hide");
   }
 });
 
